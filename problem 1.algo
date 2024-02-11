@@ -1,0 +1,32 @@
+ALGORITHM Problem 1
+VAR
+    T1,T2,T3,t : ARRAY_OF INTEGER[20];
+    n1,n2,x,sum,i,j : INTEGER
+BEGIN
+FUNCTION find(item,t,j) : BOOLEAN
+BEGIN
+FOR i FROM 0 TO j STEP i++  DO
+    find:=false
+    IF (item = t[j]) THEN
+        find:=true;
+    END_IF
+END_FOR
+RETURN find;
+END
+x:=0;
+sum:=0
+FOR i FROM 0 TO n1 STEP i++  DO
+    IF (find(T1[i],T2,n2):=false) THEN
+        T3[x]:= T1[i];
+        sum:=sum+T1[i];
+        x++;
+    END_IF
+    FOR i FROM 0 TO n2 STEP i++  DO
+        F (find(T2[i],T1,n1):=false) THEN
+        T3[x]:= T2[i];
+        sum:=sum+T1[i];
+        x++;
+    END_IF
+    END_FOR
+END_FOR
+END
